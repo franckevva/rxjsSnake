@@ -1,0 +1,27 @@
+{
+  "rulesDirectory": [
+    "node_modules/codelyzer"
+  ],
+  "extends": [
+    "tslint:recommended"
+  ],
+  "rules": {
+    "max-line-length": [
+      true,
+      140
+    ],
+    "member-ordering": false,
+    "quotemark": [
+      true,
+      "single"
+    ],
+    "only-arrow-functions": false,
+    "jsdoc-format": false,
+    "no-string-literal": false,
+    "arrow-parens": [true, "ban-single-arg-parens"],
+    "max-classes-per-file": [false],
+    "use-view-encapsulation": false,
+    "no-console": [false],
+    "object-literal-sort-keys": false
+  }
+}
