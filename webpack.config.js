@@ -12,33 +12,33 @@ module.exports = {
     },
     output: {
         filename: "[name].bundle.js",
-        path: DESTINATION
+        path: DESTINATION,
     },
     resolve: {
         extensions: [".ts", ".js"],
-        modules: [ROOT, "node_modules"]
+        modules: [ROOT, "node_modules"],
     },
     module: {
         rules: [
             {
                 enforce: "pre",
                 test: /\.js$/,
-                use: "source-map-loader"
+                use: "source-map-loader",
             },
             {
                 enforce: "pre",
                 test: /\.ts$/,
-                exclude: /node_modules/,
-                use: "tslint-loader"
+                exclude: [/node_modules/],
+                use: "tslint-loader",
             },
             {
                 test: /\.ts$/,
                 exclude: [/node_modules/],
-                use: "awesome-typescript-loader"
-            }
-        ]
+                use: "awesome-typescript-loader",
+            },
+        ],
     },
 
     devtool: "cheap-module-source-map",
-    devServer: {}
+    devServer: {},
 };
